@@ -13,6 +13,7 @@
 		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+		BDAAA1E70D3EFD6600DC5E68 /* KFTestModel.rb in Resources */ = {isa = PBXBuildFile; fileRef = BDAAA1E60D3EFD6600DC5E68 /* KFTestModel.rb */; };
 		BDCF42CB0D3DFC3400B5F79A /* KFWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = BDCF42CA0D3DFC3400B5F79A /* KFWindowController.rb */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDCA7120ACC9A6100E082CE /* kanaflash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kanaflash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDAAA1E60D3EFD6600DC5E68 /* KFTestModel.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = KFTestModel.rb; sourceTree = "<group>"; };
 		BDCF42CA0D3DFC3400B5F79A /* KFWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = KFWindowController.rb; sourceTree = "<group>"; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCF42CA0D3DFC3400B5F79A /* KFWindowController.rb */,
+				BDAAA1E60D3EFD6600DC5E68 /* KFTestModel.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */,
 				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
 				BDCF42CB0D3DFC3400B5F79A /* KFWindowController.rb in Resources */,
+				BDAAA1E70D3EFD6600DC5E68 /* KFTestModel.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

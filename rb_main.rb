@@ -3,7 +3,7 @@
 #  kanaflash
 #
 #  Created by June Tate-Gans on 1/16/08.
-#  Copyright (c) 2008 __MyCompanyName__. All rights reserved.
+#  Copyright (c) 2008 June Tate-Gans. All rights reserved.
 #
 
 require 'osx/cocoa'
