@@ -18,10 +18,17 @@ class KFWindowController < OSX::NSWindowController
   ib_outlet :accuracyPercentageText
   ib_outlet :elapsedTimeText
 
+  ib_outlet :kanaTypePopup
   ib_outlet :testModel
 
   def awakeFromNib
     @questionView.setEditable(false);
+
+    @kanaTypePopup.removeAllItems
+    kana_types = @testModel.kanaTypes.map { |v| v.to_s.capitalize }
+    @kanaTypePopup.addItemsWithTitles(kana_types)
+
+    updateView
   end
   
   def updateView
@@ -30,6 +37,9 @@ class KFWindowController < OSX::NSWindowController
     @totalText.takeIntValueFrom(@testModel.numQuestions)
     @accuracyPercentageText.takeFloatValueFrom(@testModel.accuracyPercentage)
     @questionView.setStringValue(@testModel.question)
+
+    selected_kana = @testModel.kanaTypes.index @testModel.kanaType
+    @kanaTypePopup.selectItemAtIndex(selected_kana)
   end
 
   def resetTest(sender)
@@ -39,9 +49,7 @@ class KFWindowController < OSX::NSWindowController
   ib_action :resetTest
 
   def checkAnswer(sender)
-    if @testModel.checkAnswer! @answerTextField.stringValue
-      NSRunAlertPanel("KanaFlash", "Correct!", 'OK', nil, nil)
-    else
+    unless @testModel.checkAnswer! @answerTextField.stringValue
       NSRunAlertPanel("KanaFlash", "Incorrect! Correct answer was #{@testModel.answer}.", 'OK', nil, nil)
     end
     
@@ -49,4 +57,14 @@ class KFWindowController < OSX::NSWindowController
     updateView
   end
   ib_action :checkAnswer
+
+  def changeKanaType(sender)
+    selected_idx = @kanaTypePopup.indexOfSelectedItem
+    kana = @testModel.kanaTypes[selected_idx]
+
+    @testModel.setKanaType kana
+    @testModel.reset!
+    updateView
+  end
+  ib_action :changeKanaType
 end
